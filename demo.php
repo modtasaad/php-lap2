@@ -40,7 +40,12 @@ $students = [
 // echo"<table><th>
 echo "<table  border=1;><tr><td>NAME</td><td>EMAIL</td><td>STATUS</td></tr>";
      foreach ($students as $std){
-      echo "<tr><td>".$std['name']."</td><td>".$std['email']."</td> <td>".$std['status']."</td></tr>";
+        if($std['status']=='PHP'){
+            echo "<tr style='color:red'><td>".$std['name']."</td><td>".$std['email']."</td> <td>".$std['status']."</td></tr>";
+          }
+          else{
+            echo "<tr><td>".$std['name']."</td><td>".$std['email']."</td> <td>".$std['status']."</td></tr>";
+          }
     }
-    echo "</table></div>";
+    echo "</table>";
 ?>
